@@ -1,0 +1,22 @@
+# config/config.yaml
+
+data:
+  raw_data_path: data/trust_chain_dataset.csv
+  cleaned_data_path: data/df_cleaned.csv
+
+model:
+  model_path: models/isolation_forest.pkl
+  scaler_path: models/scaler.pkl
+  contamination: 0.01
+  random_state: 42
+  n_estimators: 100
+
+realtime:
+  simulation_delay: 0.5
+
+streamlit:
+  default_filter:
+    region: All
+    location: All
+    item_id: All
+  show_anomaly_chart: true
