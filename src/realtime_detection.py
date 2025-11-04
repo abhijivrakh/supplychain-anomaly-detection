@@ -25,7 +25,7 @@ def simulate_realtime_detection(csv_path, delay=0.5):
     # Load test data
     df = pd.read_csv(csv_path)
 
-    print("🚀 Starting real-time anomaly simulation...")
+    print(" Starting real-time anomaly simulation...")
     print("=" * 50)
 
     for i, row in df.head(10).iterrows():
