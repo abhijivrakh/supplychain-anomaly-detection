@@ -44,13 +44,13 @@ def simulate_realtime_detection(csv_path, delay=0.5):
 
         # Step 4: Prediction
         prediction = model.predict(X_scaled)[0]
-        label = "🟢 Normal" if prediction == 1 else "🔴 Anomaly"
+        label = " Normal" if prediction == 1 else " Anomaly"
 
         print(f"[{i+1}] ➤ Prediction: {label} | Data: {record.iloc[0].to_dict()}")
 
         time.sleep(delay)  # simulate delay
 
-    print("✅ Simulation finished.")
+    print(" Simulation finished.")
 
 if __name__ == "__main__":
     simulate_realtime_detection("data/df_cleaned.csv", delay=0.2)
