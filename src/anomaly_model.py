@@ -18,7 +18,7 @@ def train_anomaly_model(X, save_model=True, model_path="models/isolation_forest.
     if save_model:
         os.makedirs(os.path.dirname(model_path), exist_ok=True)
         joblib.dump(model, model_path)
-        print(f"✅ Model saved to {model_path}")
+        print(f" Model saved to {model_path}")
 
     return model
 
@@ -47,6 +47,6 @@ if __name__ == "__main__":
     import numpy as np
     unique, counts = np.unique(predictions, return_counts=True)
     results = dict(zip(unique, counts))
-    print("📊 Anomaly Label Distribution:", results)
+    print("Anomaly Label Distribution:", results)
 
-    print("✅ Anomaly detection completed.")
+    print(" Anomaly detection completed.")
