@@ -11,7 +11,7 @@ from src.feature_engineering import encode_categorical_features, scale_features
 model = joblib.load("models/isolation_forest.pkl")
 scaler = joblib.load("models/scaler.pkl")
 
-st.title("📦 Real-Time Anomaly Detection for Supply Chain")
+st.title(" Real-Time Anomaly Detection for Supply Chain")
 st.markdown("Upload your CSV file and detect operational anomalies.")
 
 # Upload file
@@ -49,7 +49,7 @@ if uploaded_file:
 
         # Download result
         csv = df.to_csv(index=False).encode()
-        st.download_button("📥 Download Result CSV", csv, file_name="anomaly_results.csv")
+        st.download_button("Download Result CSV", csv, file_name="anomaly_results.csv")
 
     except Exception as e:
         st.error(f"❌ Error: {str(e)}")
