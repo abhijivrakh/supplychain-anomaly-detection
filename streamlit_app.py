@@ -20,7 +20,7 @@ uploaded_file = st.file_uploader("Upload supply chain data (.csv)", type=["csv"]
 if uploaded_file:
     try:
         df = pd.read_csv(uploaded_file)
-        st.success("✅ File uploaded successfully!")
+        st.success("File uploaded successfully!")
 
         # Step 1: Encode
         df_encoded = encode_categorical_features(df)
@@ -38,7 +38,7 @@ if uploaded_file:
 
         # Step 4: Predict
         predictions = model.predict(X_scaled)
-        df["Anomaly"] = np.where(predictions == -1, "🔴 Anomaly", "🟢 Normal")
+        df["Anomaly"] = np.where(predictions == -1, " Anomaly", "Normal")
 
         # Display
         st.subheader("🔍 Prediction Summary")
